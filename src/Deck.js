@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
-   Animated,
+  Animated,
   PanResponder
       }
    from 'react-native';
@@ -15,7 +15,7 @@ import {
          onPanResponderMove: (event, gesture) => {
            console.log(gesture);
          },
-         onPanResponderRelease: () => {}
+         onPanResponderRelease: () => {} 
 
        });
 
@@ -32,7 +32,7 @@ renderCards() {
 
   render() {
     return (
-      <View>
+  <View {...this.state.panResponder.panHandlers}>
         {this.renderCards()}
       </View>
     );
